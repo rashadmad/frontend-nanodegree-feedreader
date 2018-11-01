@@ -39,6 +39,15 @@ $(function() {
         });
     });
 
+    describe('The menu', function() {
+      const BODY = document.body;
+      const MOCKBUTTON = $('.menu-icon-link');
+      it('displays when the menu icon is clicked', function() {
+        MOCKBUTTON.click();
+        expect($("body").classList).contains('menu-hidden');
+      });
+    });
+
 
     /* TODO: Write a new test suite named "The menu" */
 
