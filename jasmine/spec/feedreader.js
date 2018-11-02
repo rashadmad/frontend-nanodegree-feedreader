@@ -39,14 +39,23 @@ $(function() {
         });
     });
 
-    describe('The menu', function() {
+    describe('The menu', function () {
       const BODY = document.body;
       const MOCKBUTTON = $('.menu-icon-link');
-      it('displays when the menu icon is clicked', function() {
+
+      it('displays when the menu icon is clicked', function () {
+        expect($("body").hasClass("menu-hidden")).toBe(true);
         MOCKBUTTON.click();
-        expect($("body").classList).contains('menu-hidden');
       });
+      if($("body").hasClass("menu-hidden")){
+        it('displays when the menu icon is clicked when the menu is displaying', function(){
+          expect($("body").hasClass("")).toBe(true);
+          MOCKBUTTON.click();
+        });
+      }
     });
+
+
 
 
     /* TODO: Write a new test suite named "The menu" */
