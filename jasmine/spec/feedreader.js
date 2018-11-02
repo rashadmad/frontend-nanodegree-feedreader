@@ -43,34 +43,23 @@ $(function() {
       const BODY = document.body;
       const MOCKBUTTON = $('.menu-icon-link');
 
+      it('is hidden by default', function() {
+        expect($("body").hasClass("menu-hidden")).toBe(true);
+      })
+
       it('displays when the menu icon is clicked', function () {
         expect($("body").hasClass("menu-hidden")).toBe(true);
         MOCKBUTTON.click();
       });
+
       if($("body").hasClass("menu-hidden")){
-        it('displays when the menu icon is clicked when the menu is displaying', function(){
+        it('hides when the menu icon is clicked when the menu is displaying', function(){
           expect($("body").hasClass("")).toBe(true);
           MOCKBUTTON.click();
         });
       }
     });
 
-
-
-
-    /* TODO: Write a new test suite named "The menu" */
-
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
-         */
-
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
