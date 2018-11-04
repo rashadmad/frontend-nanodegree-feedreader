@@ -45,19 +45,18 @@ $(function() {
 
       it('is hidden by default', function() {
         expect($("body").hasClass("menu-hidden")).toBe(true);
-      })
+      });
 
       it('displays when the menu icon is clicked', function () {
         expect($("body").hasClass("menu-hidden")).toBe(true);
         MOCKBUTTON.click();
       });
 
-      if($("body").hasClass("menu-hidden")){
-        it('hides when the menu icon is clicked when the menu is displaying', function(){
-          expect($("body").hasClass("")).toBe(true);
-          MOCKBUTTON.click();
-        });
-      }
+      it('hides when the menu icon is clicked when the menu is displaying', function(){
+        expect($("body").hasClass("")).toBe(true);
+        MOCKBUTTON.click();
+        MOCKBUTTON.click();
+      });
     });
 
 
