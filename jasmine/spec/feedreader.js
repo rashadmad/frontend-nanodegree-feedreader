@@ -77,13 +77,13 @@ $(function() {
 
         beforeEach(function(done){
            loadFeed(0);
-           Array.from(feed.children).forEach(function(entry){
-              firstFeed.push(entry.innerText);
+           Array.from(FEED.children).forEach(function(entry){
+              FIRSTFEED.push(entry.innerText);
            });
            LoadFeed(1,done);
         });
         it('content changes', function() {
-            Array.from(feed.children).forEach(function(entry,index) {
+            Array.from(FEED.children).forEach(function(entry,index) {
                 expect(entry.innerText === FIRSTFEED[index]).toBe(False);
             });
         });
