@@ -94,12 +94,7 @@ google.setOnLoadCallback(init);
  * until the DOM is ready.
  */
 $(function() {
-    let SLIDE = document.querySelector('.slide-menu');
-    let compStyle = window.getComputedStyle(SLIDE);
-    console.log(compStyle.getPropertyValue('transform'));
 
-
-    console.log(compStyle.getPropertyValue('font-size'));
     var container = $('.feed'),
         feedList = $('.feed-list'),
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),
