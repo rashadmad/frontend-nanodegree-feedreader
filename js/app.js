@@ -27,6 +27,7 @@ var allFeeds = [
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
  */
+
 function init() {
     // Load the first feed we've defined (index of 0).
     loadFeed(0);
@@ -93,6 +94,12 @@ google.setOnLoadCallback(init);
  * until the DOM is ready.
  */
 $(function() {
+    let SLIDE = document.querySelector('.slide-menu');
+    let compStyle = window.getComputedStyle(SLIDE);
+    console.log(compStyle.getPropertyValue('transform'));
+
+
+    console.log(compStyle.getPropertyValue('font-size'));
     var container = $('.feed'),
         feedList = $('.feed-list'),
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),

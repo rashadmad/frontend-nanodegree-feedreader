@@ -46,12 +46,12 @@ $(function() {
       it('is hidden by default', function() {
         expect($("body").hasClass("menu-hidden")).toBe(true);
       });
-
+      //check for button click to change css selector
       it('displays when the menu icon is clicked', function () {
         expect($("body").hasClass("menu-hidden")).toBe(true);
         MOCKBUTTON.click();
       });
-
+      //check for button click after button click
       it('hides when the menu icon is clicked when the menu is displaying', function(){
         expect($("body").hasClass("")).toBe(true);
         MOCKBUTTON.click();
